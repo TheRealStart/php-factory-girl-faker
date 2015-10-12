@@ -1,0 +1,26 @@
+{
+    "name": "the-real-start/factory-girl-faker",
+    "description": "The goal of this package is to wrap faker to make it super easy to use with factory girl.",
+    "keywords": ["testing", "factory", "faker"],
+    "type": "package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "chestr",
+            "email": "chestr.nix.uz@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "fzaninotto/faker" : "1.5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "TRS\\FactoryGirl\\Faker\\": "src/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "minimum-stability": "stable"
+}
