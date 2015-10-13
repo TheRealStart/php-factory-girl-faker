@@ -11,6 +11,7 @@ class Factory extends BaseFakerFactory
 
     protected static $extrasProviders = [
         'UploadedFile',
+        'StaticImage'
     ];
 
     public static function create($locale = self::DEFAULT_LOCALE)
@@ -52,7 +53,7 @@ class Factory extends BaseFakerFactory
         if (class_exists($providerClass, true)) {
             return $providerClass;
         } else {
-            $providerClass = 'tests\\factory\\Faker\\Extras\\' . ($locale ? sprintf('Providers\%s\%s', $locale, $provider) : sprintf('Providers\%s', $provider));
+            $providerClass = 'TRS\\FactoryGirl\\Faker\\' . ($locale ? sprintf('ExtraProviders\%s\%s', $locale, $provider) : sprintf('ExtraProviders\%s', $provider));
         }
         if (class_exists($providerClass, true)) {
             return $providerClass;
